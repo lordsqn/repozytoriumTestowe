@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="logserver">LogServer</h1>
+<p>Serwer służący do zbierania logów aplikacji oparty o stos ELK <strong>Elasticseatch&gt;Logstash&gt;Kibana</strong> zapewniający bezpieczne przekazywanie danych w sieci korporacyjnej</p>
+<h2 id="schemat-rozwiązania">Schemat rozwiązania</h2>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-FOZpLj8hIIhJFNko" width="100%" style="max-width: 1001.1875px;" viewBox="0 0 1001.1875 278"><g transform="translate(-12, -12)"><g class="output"><g class="clusters"><g class="cluster" id="subGraph2" transform="translate(803.5,78)" style="opacity: 1;"><rect width="403.375" height="116" x="-201.6875" y="-58"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-44" fill="black" stroke="none" id="mermaid-svg-FOZpLj8hIIhJFNkoText" style="text-anchor: middle;">ELK Stack</text></g><g class="cluster" id="subGraph1" transform="translate(165.0859375,219)" style="opacity: 1;"><rect width="290.171875" height="126" x="-145.0859375" y="-63"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-49" fill="black" stroke="none" id="mermaid-svg-FOZpLj8hIIhJFNkoText" style="text-anchor: middle;">Client server</text></g><g class="cluster" id="subGraph0" transform="translate(355.8203125,78)" style="opacity: 1;"><rect width="391.984375" height="116" x="-195.9921875" y="-58"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-44" fill="black" stroke="none" id="mermaid-svg-FOZpLj8hIIhJFNkoText" style="text-anchor: middle;">Transport Layer</text></g></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M285.171875,78L310.171875,78L365.6953125,78L421.21875,78" marker-end="url(#arrowhead16204)" style="fill:none"></path><defs><marker id="arrowhead16204" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M109.828125,219.64566607701727L134.828125,224L159.828125,224L209.140625,224" marker-end="url(#arrowhead16205)" style="fill:none"></path><defs><marker id="arrowhead16205" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M109.828125,203.27323445366716L134.828125,195L159.828125,195L220.22262286324786,101" marker-end="url(#arrowhead16206)" style="fill:none"></path><defs><marker id="arrowhead16206" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M526.8125,78L551.8125,78L576.8125,78L601.8125,78L626.8125,78" marker-end="url(#arrowhead16207)" style="fill:none"></path><defs><marker id="arrowhead16207" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M704.421875,78L729.421875,78L754.421875,78" marker-end="url(#arrowhead16208)" style="fill:none"></path><defs><marker id="arrowhead16208" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M864.421875,78L889.421875,78L914.421875,78" marker-end="url(#arrowhead16209)" style="fill:none"></path><defs><marker id="arrowhead16209" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(365.6953125,78)" style="opacity: 1;"><g transform="translate(-30.5234375,-13)" class="label"><foreignObject width="61.046875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">TLS v1.3</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="B" transform="translate(474.015625,78)" style="opacity: 1;"><rect rx="0" ry="0" x="-52.796875" y="-23" width="105.59375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.796875,-13)"><foreignObject width="85.59375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">nginx server</div></foreignObject></g></g></g><g class="node" id="D" transform="translate(665.6171875,78)" style="opacity: 1;"><rect rx="0" ry="0" x="-38.8046875" y="-23" width="77.609375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-28.8046875,-13)"><foreignObject width="57.609375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">logstash</div></foreignObject></g></g></g><g class="node" id="E" transform="translate(809.421875,78)" style="opacity: 1;"><rect rx="0" ry="0" x="-55" y="-23" width="110" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-45,-13)"><foreignObject width="90" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">elasticsearch</div></foreignObject></g></g></g><g class="node" id="F" transform="translate(947.3046875,78)" style="opacity: 1;"><rect rx="0" ry="0" x="-32.8828125" y="-23" width="65.765625" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-22.8828125,-13)"><foreignObject width="45.765625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">kibana</div></foreignObject></g></g></g><g class="node" id="C" transform="translate(77.4140625,214)" style="opacity: 1;"><rect rx="0" ry="0" x="-32.4140625" y="-23" width="64.828125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-22.4140625,-13)"><foreignObject width="44.828125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">*beats</div></foreignObject></g></g></g><g class="node" id="*.log" transform="translate(235,224)" style="opacity: 1;"><rect rx="0" ry="0" x="-25.859375" y="-23" width="51.71875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-15.859375,-13)"><foreignObject width="31.71875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">*.log</div></foreignObject></g></g></g><g class="node" id="A" transform="translate(235,78)" style="opacity: 1;"><rect rx="0" ry="0" x="-50.171875" y="-23" width="100.34375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.171875,-13)"><foreignObject width="80.34375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">nginx client</div></foreignObject></g></g></g></g></g></g></svg></div>
+<h2 id="instrukcja-dodania-nowej-aplikacji-do-servera-logów">Instrukcja dodania nowej aplikacji do servera logów:</h2>
+<h3 id="przygotowanie">Przygotowanie</h3>
+<ol>
+<li>Przed przystąpieniem do dodawania nowej maszyny do log serwera należy przygotować:
+<ul>
+<li><strong>nazwę aplikacji</strong> pod jaką będzie ona identyfikowana na logserwerze</li>
+<li><strong>ip</strong> serwera na którym zanajduje się aplikacja</li>
+<li>określić <strong>typ aplikacji</strong> (apache, nginx, mssql etc…)</li>
+<li>określić <strong>system</strong> na jakim działa aplikacja (windows, linux)</li>
+</ul>
+</li>
+<li>Na Logserwerze należy sprawdzić czy są dostępne wolne porty nasłuchu w nginx-server nginx.conf a następnie uzupełnić dane na temat źródła w komentarzu obok definicji serwera - {name}-{ip}-{app_type}-{system}<br>
+Jeśli wszystkie porty są wykorzystane należy dodać nowy server słuchający na kolejnym porcie z serii 55xxx i proxujący na port z serii 50xxx</li>
+</ol>
+<pre class=" language-nginx"><code class="prism  language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span> <span class="token comment"># {name}-{ip}-{app_type}-{system}</span>
+    <span class="token keyword">listen</span> 55xxx <span class="token keyword">ssl</span><span class="token punctuation">;</span>
+    <span class="token keyword">proxy_pass</span> localhost<span class="token punctuation">:</span>50xxx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="konfiguracja-po-stronie-logservera">Konfiguracja po stronie logservera</h3>
+<p>W katalogu logstash/config należy skonfigurować nowy pipeline. W tym celu należy stworzyć nowy plik o nazwie wg <code>schematu {name}-{ip}-{app_type}-{system}.conf</code><br>
+W zawartości pliku jako input należy podać port ustawiony w nginx-server skonfigurowanym w proxy_pass:</p>
+<pre class=" language-nginx"><code class="prism  language-nginx">input <span class="token punctuation">{</span>
+  beats <span class="token punctuation">{</span>
+    port <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token operator">%</span>proxy_pass_port<span class="token operator">%</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>w output jako schemat nazewnictwa indexów oraz adres elasticsearch należy podać następującą formułę:</p>
+<pre><code>output {
+  elasticsearch {
+    hosts =&gt; ["http://localhost:9200"]
+    index =&gt; "%{[info][appname]}-%{[@metadata][ip_address]}-%{[service][type]}-%{[host][os][platform]}-%{+YYYY.MM.dd}"
+  }
+}
+</code></pre>
+<p>Jeżeli jest taka konieczność należy też ustawić filtry parsujące logi.</p>
+<p>Tak przygotowany plik należy dodać jako nowy pipeline w pliku <code>pipelines.yml</code> z id wg schematu <code>{name}-{ip}-{app_type}-{system}</code></p>
+<pre><code>- pipeline.id: {name}-{ip}-{app_type}-{system}
+path.config: "../config/{name}-{ip}-{app_type}-{system}.conf"
+</code></pre>
+<h3 id="przygotowanie-maszyny-klienckiej">Przygotowanie maszyny klienckiej</h3>
+<ol>
+<li>Na maszynie z której chcemy pobierać logi zwanej dalej kliencką należy zainstalować aplikację z rodziny beats:<br>
+<a href="https://www.elastic.co/downloads/beats">https://www.elastic.co/downloads/beats</a><br>
+w zależności od typu logów który chcemy pobierać.</li>
+<li>Aby zapewnić bezpieczeństwo przesyłu danych należy na niej zainstalować aplikację <code>nginx</code> z następującą konfiguracją:</li>
+</ol>
+<pre class=" language-nginx"><code class="prism  language-nginx"><span class="token keyword">worker_processes</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">events</span> <span class="token punctuation">{</span>
+    <span class="token keyword">worker_connections</span>  <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">error_log</span>  logs<span class="token operator">/</span>error<span class="token punctuation">.</span>log  info<span class="token punctuation">;</span>
+
+stream <span class="token punctuation">{</span>
+    <span class="token keyword">upstream</span> logstash<span class="token operator">-</span><span class="token keyword">proxy</span> <span class="token punctuation">{</span>
+        <span class="token keyword">server</span> localhost<span class="token punctuation">:</span> <span class="token operator">%</span>LOGSERVER_PROXYPORT<span class="token operator">%</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span> <span class="token number">45000</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_pass</span> logstash<span class="token operator">-</span><span class="token keyword">proxy</span><span class="token punctuation">;</span>
+        proxy_ssl on<span class="token punctuation">;</span>
+        proxy_ssl_certificate         BNP_LOGCLIENT<span class="token punctuation">.</span>crt<span class="token punctuation">;</span>
+        proxy_ssl_certificate_key     BNP_LOGCLIENT<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+        proxy_ssl_protocols           TLSv1<span class="token number">.2</span> TLSv1<span class="token number">.3</span><span class="token punctuation">;</span>
+        proxy_ssl_ciphers             ECDHE<span class="token operator">-</span>ECDSA<span class="token operator">-</span>AES256<span class="token operator">-</span>GCM<span class="token operator">-</span>SHA384<span class="token punctuation">:</span>ECDHE<span class="token operator">-</span>RSA<span class="token operator">-</span>AES256<span class="token operator">-</span>GCM<span class="token operator">-</span>SHA384<span class="token punctuation">:</span>ECDHE<span class="token operator">-</span>ECDSA<span class="token operator">-</span>CHACHA20<span class="token operator">-</span>POLY1305<span class="token punctuation">:</span>ECDHE<span class="token operator">-</span>RSA<span class="token operator">-</span>CHACHA20<span class="token operator">-</span>POLY1305<span class="token punctuation">:</span>DHE<span class="token operator">-</span>RSA<span class="token operator">-</span>AES256<span class="token operator">-</span>GCM<span class="token operator">-</span>SHA384<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>w miejscu placeholdera <code>%LOGSERVER_PROXYPORT%</code> należy wstawić port nasłuchu z konfiguracji nginx-server.</p>
+<ol start="3">
+<li>
+<p>Do katalogu nginx/conf należy wgrać certyfikat wygenerowany dla maszyny klienckiej wraz z kluczem prywatnym wygenerowany na podstawie CA skonfigurowanego po stronie serwera. Certyfikat można wygenerować na serwerze za pomocą generatora certyfikatów w katalogu <code>c:/LogServer/certificates</code> jako CN należy podać IP maszyny klienckiej.</p>
+</li>
+<li>
+<p>W pliku konfiguracyjnym aplikacji *beats należy:</p>
+<ul>
+<li>Wskazać źródła danych (w zależności do beats’a)</li>
+<li>Dodać odpowiedni dla typu aplikacji moduł parsowania danych <code>- filebeat.modules:</code></li>
+<li>Wskazać tunel gdzie mają być przekazywane dane (logstash) w parametrze <code>output.logstash</code> w naszym przypadku musimy podać nginx klienta czyli <code>hosts: ["localhost:45000"]</code></li>
+<li>Dodać pole z nazwą aplikacji która będzie przekazywana do logstasha w celu wskazania właściwego indeksu:</li>
+</ul>
+</li>
+</ol>
+<pre class=" language-yaml"><code class="prism  language-yaml"><span class="token key atrule">processors</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">add_fields</span><span class="token punctuation">:</span>
+      <span class="token key atrule">target</span><span class="token punctuation">:</span> info
+      <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+        <span class="token key atrule">appname</span><span class="token punctuation">:</span> %APP_NAME%
+</code></pre>
+</div>
+</body>
+
+</html>
