@@ -66,7 +66,7 @@ filebeat.inputs:
 
 filebeat.config.modules:
   # Glob pattern for configuration loading
-  path: d:/Elastic/filebeat-7.9.2/modules.d/*.yml
+  path: ${path.config}/modules.d/*.yml
 
   # Set to true to enable config reloading
   reload.enabled: false
@@ -180,8 +180,7 @@ setup.kibana:
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
   # The Logstash hosts
-  # hosts: ["localhost:5044"]
-  hosts: ["localhost:1000"]
+  hosts: ["localhost:45000"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
@@ -200,6 +199,10 @@ processors:
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
   - add_kubernetes_metadata: ~
+  - add_fields:
+      target: info
+      fields:
+        appname: app1234
 
 # ================================== Logging ===================================
 
