@@ -25,18 +25,20 @@ graph LR
 1. Przed przystąpieniem do dodawania nowej maszyny do log serwera należy przygotować:
     - **nazwę aplikacji** pod jaką będzie ona identyfikowana na logserwerze
     - **ip** serwera na którym zanajduje się aplikacja
-    - określić **typ aplikacji** (apache, nginx, mssql etc..)
+	- określić **typ aplikacji** (webserver, database, javaapp etc...)
+	- określić **silnik aplikacji** (apache, nginx, mssql etc...)
+	- określić **typ zbieranych logów** (info, error, system, status)
     - określić **system** na jakim działa aplikacja (windows, linux)
 2. Na Logserwerze należy sprawdzić czy są dostępne wolne porty nasłuchu w nginx-server nginx.conf a następnie uzupełnić dane na temat źródła w komentarzu obok definicji serwera - {name}-{ip}-{app_type}-{system}
 Jeśli wszystkie porty są wykorzystane należy dodać nowy server słuchający na kolejnym porcie z serii 55xxx i proxujący na port z serii 50xxx
 ```nginx
-server { # {name}-{ip}-{app_type}-{system}
+server { # {name}-{ip}-{app_type}-{engine}-{log_type}-{system}
     listen 55xxx ssl;
     proxy_pass localhost:50xxx;
 }
 ```
 ### Konfiguracja po stronie logservera
-W katalogu logstash/config należy skonfigurować nowy pipeline. W tym celu należy stworzyć nowy plik o nazwie wg `schematu {name}-{ip}-{app_type}-{system}.conf`
+W katalogu logstash/config należy skonfigurować nowy pipeline. W tym celu należy stworzyć nowy plik o nazwie wg `schematu {name}-{ip}-{app_type}-{engine}-{log_type}-{system}.conf`
 W zawartości pliku jako input należy podać port ustawiony w nginx-server skonfigurowanym w proxy_pass:
 ```nginx
 input {
@@ -50,16 +52,16 @@ w output jako schemat nazewnictwa indexów oraz adres elasticsearch należy poda
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
-    index => "%{[info][appname]}-%{[@metadata][ip_address]}-%{[service][type]}-%{[host][os][platform]}-%{+YYYY.MM.dd}"
+    index => "%{[info][appname]}-%{[host][ip]}-%{[info][apptype]}-%{[info][engine]}-%{[info][logtype]}-%{[host][os][platform]}-%{+YYYY.MM.dd}"
   }
 }
 ```
 Jeżeli jest taka konieczność należy też ustawić filtry parsujące logi.
 
-Tak przygotowany plik należy dodać jako nowy pipeline w pliku `pipelines.yml` z id wg schematu `{name}-{ip}-{app_type}-{system}`
+Tak przygotowany plik należy dodać jako nowy pipeline w pliku `pipelines.yml` z id wg schematu `{name}-{ip}-{app_type}-{engine}-{log_type}-{system}`
 ```
-- pipeline.id: {name}-{ip}-{app_type}-{system}
-path.config: "../config/{name}-{ip}-{app_type}-{system}.conf"
+- pipeline.id: {name}-{ip}-{app_type}-{engine}-{log_type}-{system}
+path.config: "../config/{name}-{ip}-{app_type}-{engine}-{log_type}-{system}.conf"
 ```
 
 ### Przygotowanie maszyny klienckiej
@@ -105,4 +107,7 @@ processors:
       target: info
       fields:
         appname: %APP_NAME%
+        apptype: %APP_TYPE%
+		logtype: %LOG_TYPE%
+		engine: %ENGINE%
 ```
